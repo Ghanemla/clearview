@@ -1,4 +1,4 @@
-export interface WeatherResponse{
+export interface WeatherResponse {
   location: {
     name: string;
     region: string;
@@ -7,17 +7,20 @@ export interface WeatherResponse{
     lon: number;
     tz_id: string;
     localTime_epoch: number;
-    localTime: string;
+    localtime: string;
   };
   current: {
     temp_c: number;
+    temp_f: number;
     condition: {
       text: string;
       icon: string;
-      code: number
+      code: number;
     };
     wind_kph: number;
+    wind_mph: number;
     humidity: number;
-    feelsLike_c: number;
-  }
+    feelslike_c: number;
+    feelslike_f: number;
+  };
 }
